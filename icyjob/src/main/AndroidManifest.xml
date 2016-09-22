@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="cn.icybee.icyjob">
+
+    <uses-sdk android:minSdkVersion="4" />
+
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+
+    <application
+        android:name=".app.APP"
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <meta-data
+            android:name="UMENG_APPKEY"
+            android:value="5731ecc467e58e7e290018da" />
+        <meta-data
+            android:name="UMENG_CHANNEL"
+            android:value="ALL" />
+        <meta-data
+            android:name="AA_DB_NAME"
+            android:value="icyjob.db" />
+        <meta-data
+            android:name="AA_DB_VERSION"
+            android:value="6" />
+        <meta-data
+            android:name="AA_MODELS"
+            android:value="cn.icybee.icyjob.model.database.Collection" />
+        <meta-data
+            android:name="MODEL"
+            android:value="cn.icybee.icyjob.model.JobModel" />
+
+        <activity
+            android:name=".module.main.MainActivity"
+            android:label="@string/app_name"
+            android:theme="@style/AppTheme.NoActionBar">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".module.conetnt.ContentActivity"
+            android:label="@string/title_activity_content"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity android:name=".module.filter.FilterActivity" />
+        <activity
+            android:name=".module.collection.CollectionActivity"
+            android:label="@string/title_activity_collection"
+            android:theme="@style/AppTheme.NoActionBar"></activity>
+    </application>
+
+</manifest>

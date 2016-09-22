@@ -1,0 +1,46 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 23
+    buildToolsVersion "23.0.2"
+
+    defaultConfig {
+        applicationId "cn.icybee.icyjob"
+        minSdkVersion 19
+        targetSdkVersion 23
+        versionCode 1
+        versionName "1.0"
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+}
+
+dependencies {
+    compile fileTree(dir: 'libs', include: ['*.jar'])
+    testCompile 'junit:junit:4.12'
+    compile 'com.android.support:appcompat-v7:23.2.1'
+    compile 'com.android.support:design:23.2.1'
+    compile 'com.android.support:cardview-v7:23.+'
+
+    compile 'com.jude:beam:2.6.10'
+    /*compile('com.github.afollestad.material-dialogs:core:0.8.5.4@aar') {
+        transitive = true
+    }*/
+    compile 'com.android.support:design:23.1.1'
+    compile 'com.google.code.gson:gson:2.4'
+    compile 'com.jude:utils:1.0.7'
+    compile 'com.jakewharton:butterknife:7.0.1'
+    compile 'com.github.bumptech.glide:glide:3.6.1'
+    compile 'com.jude:requestvolley:1.0.4'
+    compile 'com.mcxiaoke.volley:library:1.0.6'
+    //compile 'com.umeng:fb:5.4.0'
+    compile 'com.umeng.analytics:analytics:latest.integration'
+    //compile 'com.umeng.update:update:latest.integration'
+    //compile 'com.michaelpardo:activeandroid:3.1.0-SNAPSHOT'
+    compile 'com.activeandroid:thread-safe-active-android:3.1.1'
+    compile 'com.github.ivbaranov:materialfavoritebutton:0.1.2'
+}
